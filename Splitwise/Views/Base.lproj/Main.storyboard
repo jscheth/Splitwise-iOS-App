@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Splitwise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="Splitwise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ujm-5o-aZk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                                                         <state key="normal" title="0%">
                                                             <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7i-nI-nOa"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkA-x3-F87">
                                                         <rect key="frame" x="95.333333333333329" y="0.0" width="162.33333333333337" height="54"/>
@@ -56,6 +59,9 @@
                                                         <state key="normal" title="10%">
                                                             <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VHf-7u-0WL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBD-EX-AkT">
                                                         <rect key="frame" x="257.66666666666669" y="0.0" width="95.333333333333314" height="54"/>
@@ -67,6 +73,9 @@
                                                         <state key="normal" title="20%">
                                                             <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="00j-FZ-c15"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -102,6 +111,9 @@
                                                             <constraint firstAttribute="width" constant="94" id="p0U-QC-JDd"/>
                                                         </constraints>
                                                         <color key="tintColor" red="0.0" green="0.59227246050000004" blue="0.347086966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="stepValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="W4h-fg-4cS"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                             </stackView>
@@ -167,6 +179,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4DU-wC-d2i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gRP-8p-Gwt"/>
@@ -183,6 +198,13 @@
                             <constraint firstItem="PSz-ZR-ipL" firstAttribute="top" secondItem="b3y-0f-g1j" secondAttribute="bottom" constant="40" id="xD1-ZT-H3n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="plR-qw-16i" id="Pna-M6-0Dx"/>
+                        <outlet property="splitNumberLabel" destination="sVf-EQ-1pV" id="GO4-77-WKo"/>
+                        <outlet property="tenPercentButton" destination="RkA-x3-F87" id="8sQ-fI-U7B"/>
+                        <outlet property="twentyPercentButton" destination="GBD-EX-AkT" id="K1B-vJ-3Ov"/>
+                        <outlet property="zeroPercentButton" destination="YA8-HX-hfN" id="KXM-8f-EJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
